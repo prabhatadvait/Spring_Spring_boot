@@ -1,0 +1,31 @@
+ <beans xmlns="http://www.springframework.org/schema/beans"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <!-- bean definitions here -->
+
+    <bean id="dev" class="com.prabhat.Dev" autowire="byType"> <!-- autowire="byName"-->
+
+<!--&lt;!&ndash;        Reference variable&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="laptop" ref="lap1" /> &lt;!&ndash; setter injection &ndash;&gt;&ndash;&gt;-->
+<!--        <constructor-arg  ref="lap1"/>-->
+
+<!--&lt;!&ndash;        <property name="age" value="12"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <constructor-arg index="0" value="14"/>&ndash;&gt;-->
+
+
+        <!-- The Below code is after  the Computer Interface -->
+<!--        <property name="com" ref="com"/>--> <!-- Instead of this we can use autowire in above bean -->
+    </bean>
+
+    <!-- <bean id="dev1" class="com.prabhat.Dev">  we can create two or more object of one class with different id-->
+     <!-- </bean> -->
+
+     <bean id="com" class="com.prabhat.Laptop" primary="true">
+     </bean>
+
+     <bean id="desk1" class="com.prabhat.Desktop">
+     </bean>
+
+</beans>
